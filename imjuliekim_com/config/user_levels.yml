@@ -1,0 +1,22 @@
+# User levels
+
+# Feel free to add your own
+# the 'root' user level is added automatically and
+# will always be higher than any you add here
+# Similary the 'none' level will always be lower
+# The order is important -- later leves are higher levels
+# higher levels will always be able to do everything that a lower level can do
+# 'publish' defines the particular level's access to the publishing process
+# This is set per-level -- higher levels don't inherit the value from lower levels
+
+- :name:    editor
+  :publish: false
+
+- :name:    admin
+  :publish: true
+
+- :name:    designer
+  :publish: true
+
+# - :name:    my_level
+#   :publish: true

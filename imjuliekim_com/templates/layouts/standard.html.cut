@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>${ title } ­ imjuliekim.com</title>
+	${ stylesheets '/css/site' }
+</head>
+<body>
+  %{ block :content }
+    <h2>Welcome to imjuliekim.com</h2>
+  %{ endblock :content }
+	${ scripts %w(/js/site) }
+</body>
+</html>

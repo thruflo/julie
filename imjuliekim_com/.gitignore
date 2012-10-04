@@ -1,0 +1,6 @@
+log/*
+tmp/*
+cache/*
+.Procfile
+.irb_history
+

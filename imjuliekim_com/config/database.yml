@@ -1,0 +1,20 @@
+---
+:development: &defaults
+  :adapter:    postgres
+  :database:   imjuliekim_com
+  #:user:       thruflo
+  #:host:       localhost
+
+:test:
+  <<:         *defaults
+  :database:   imjuliekim_com_test
+
+:production:
+  <<:         *defaults
+  :database:  imjuliekim_com
+  #:user:      imjuliekim_com
+  #:password:  passw0rd
+
+:rake:
+  <<:         *defaults
+
