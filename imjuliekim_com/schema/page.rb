@@ -9,3 +9,8 @@ class Page < Spontaneous::Page
     true
   end
 end
+
+class HomePage < Page
+  field :welcome
+end
+
