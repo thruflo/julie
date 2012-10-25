@@ -11,9 +11,11 @@
 	${ stylesheets '/css/site' }
 </head>
 <body>
-  %{ block :content }
-    <h2>Welcome to imjuliekim.com!</h2>
-  %{ endblock :content }
-	${ scripts %w(/js/site) }
+  %{ block :page }
+    <h2>${ title }</h2>
+    %{ block :content }
+    %{ endblock :content }
+  %{ endblock :page }
+  ${ scripts %w(/js/site) }
 </body>
 </html>

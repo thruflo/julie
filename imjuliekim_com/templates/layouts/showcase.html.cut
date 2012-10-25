@@ -1,0 +1,7 @@
+%{ extends "layouts/standard" }
+
+%{ block :page }
+  
+  I am the showcase template.
+  
+%{ endblock :page }

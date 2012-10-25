@@ -1,0 +1,7 @@
+%{ extends "layouts/project" }
+
+%{ block :some_other_block }
+  
+  Typeface info...
+  
+%{ endblock :some_other_block }

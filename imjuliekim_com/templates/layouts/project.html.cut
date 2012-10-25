@@ -1,0 +1,11 @@
+%{ extends "layouts/standard" }
+
+%{ block :content }
+  
+  Project info...
+  
+  %{ block :some_other_block }
+    baz
+  %{ endblock :some_other_block }
+  
+%{ endblock :content }
