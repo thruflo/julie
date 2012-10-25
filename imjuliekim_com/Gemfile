@@ -1,8 +1,11 @@
 source :rubygems
 
 ## choose your poison:
-gem 'pg', '~> 0.13.2'
+gem 'pg', '~> 0.14.1'
 #gem 'mysql2', '~> 0.2'
+
+## Use yajl
+gem 'yajl-ruby', '~> 1.1.0'
 
 # Deploy with Capistrano
 gem 'capistrano', '~> 2.9'
@@ -17,7 +20,7 @@ gem 'capistrano', '~> 2.9'
 #gem 'spontaneous', '0.2.0.alpha2'
 
 gem 'spontaneous', :git => "https://github.com/Actualise/spontaneous.git"
-# gem 'spontaneous', :git => "git://github.com/SpontaneousCMS/spontaneous.git"
+#gem 'spontaneous', :git => "git://github.com/SpontaneousCMS/spontaneous.git"
 
 # Simultaneous is actually pretty stable
 #gem 'simultaneous', :git => "git://github.com/SpontaneousCMS/simultaneous.git"
