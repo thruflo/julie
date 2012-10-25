@@ -12,7 +12,7 @@
 </head>
 <body>
   %{ block :content }
-    <h2>Welcome to imjuliekim.com</h2>
+    <h2>Welcome to imjuliekim.com!</h2>
   %{ endblock :content }
 	${ scripts %w(/js/site) }
 </body>
