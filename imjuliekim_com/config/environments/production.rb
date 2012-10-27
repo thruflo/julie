@@ -10,3 +10,10 @@ server_connection       ENV["SPONTANEOUS_SERVER"]
 handler                 :unicorn
 after_publish_restart   ENV["POST_PUBLISH_COMMAND"]
 
+back do
+	port 2011
+end
+
+front do
+	port 2012
+end
