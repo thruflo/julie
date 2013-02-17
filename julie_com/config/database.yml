@@ -1,6 +1,6 @@
 ---
 :development: &defaults
-  :adapter:    postgres
+  :adapter:    mysql2
   :database:   julie_com
   :user:       julie
   :password:   
@@ -12,9 +12,9 @@
 
 :production:
   <<:         *defaults
-  :adapter:   mysql
+  :adapter:   mysql2
   :database:  julie_com
-  :user:      XXX
+  :user:      julie
   :password:  XXX
 
 :rake:
