@@ -12,6 +12,7 @@
 
 :production:
   <<:         *defaults
+  :adapter:   mysql
   :database:  julie_com
   :user:      XXX
   :password:  XXX
