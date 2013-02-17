@@ -4,7 +4,7 @@ background_mode :simultaneous
 simultaneous_connection "/tmp/simultaneous.julie_com.sock"
 
 # ensures that schema classes are reloaded with every request
-reload_classes false
+reload_classes true
 
 host 'localhost'
 
