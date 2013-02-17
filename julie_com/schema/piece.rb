@@ -1,4 +1,4 @@
 # encoding: UTF-8
 
-class Piece < Spontaneous::Piece
+class Piece < Content::Piece
 end

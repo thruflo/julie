@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-class Page < Spontaneous::Page
+class Page < Content::Page
   # pages must respond to the title method
   # so if you remove this 'title' field, then you must replace it with
   # a #title method
@@ -15,6 +15,12 @@ end
 
 class HomePage < Page
   layout :home
+  field :image do
+    size :feature do
+      fit 640, 360
+      optimize!
+    end
+  end
 end
 
 class AboutPage < Page
