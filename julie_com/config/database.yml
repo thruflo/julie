@@ -1,0 +1,22 @@
+---
+:development: &defaults
+  :adapter:    postgres
+  :database:   julie_com
+  :user:       julie
+  :password:   
+
+
+:test:
+  <<:         *defaults
+  :database:   julie_com_test
+
+:production:
+  <<:         *defaults
+  :database:  julie_com
+  :user:      XXX
+  :password:  XXX
+
+:rake:
+  <<:         *defaults
+
+

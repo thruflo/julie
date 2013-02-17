@@ -15,6 +15,7 @@ class FeatureImageField < ThumbImageField
     optimize!
   end
 end
+FeatureImageField.register(:feature_image)
 
 class HomepageImageField < ::Spontaneous::FieldTypes::ImageField
   # XXX can we just have, e.g.: a fixed width?
