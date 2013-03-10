@@ -1,0 +1,44 @@
+@import "colours";
+
+$gutter: 15px;
+
+body {
+  padding-top: $gutter * 2;
+  background-color: $light_grey;
+}
+
+.container {
+  width: 975px;
+  .row-fluid {
+    margin-bottom: $gutter;
+    [class*="span"] {
+      margin-left: 0px;
+    }
+    .span-left {
+      width: 120px;
+      margin-right: $gutter;
+    }
+    .span-mid {
+      width: 555px;
+      margin-right: $gutter;
+    }
+    .span-right {
+      width: 270px;
+    }
+  }
+}
+
+#header {
+  h1 {
+    margin: 0px;
+  }
+  .row-fluid {
+    [class*="span"] {
+      position: relative;
+      display: block;
+      min-height: 90px !important;
+      border-bottom: 1px dotted $dark_grey;
+    }
+  }
+}
+

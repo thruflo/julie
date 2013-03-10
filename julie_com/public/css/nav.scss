@@ -1,0 +1,13 @@
+@import "fonts";
+
+.list-nav {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  li {
+    a {
+      @include apercu_bold;
+    }
+  }
+}
+

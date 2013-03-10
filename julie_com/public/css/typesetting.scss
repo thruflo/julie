@@ -1,0 +1,28 @@
+@import "colours";
+@import "fonts";
+
+body {
+  @include apercu_light;
+  @include standard_font_size;
+  color: $mid_grey;
+}
+
+a {
+  color: $mid_grey;
+  .active & {
+    color: $dark_grey;
+  }
+  &:hover,
+  .active &:hover {
+    color: $highlight;
+    text-decoration: none;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  @include apercu_bold;
+  @include standard_font_size;
+  & a {
+    color: $dark_grey;
+  }
+}

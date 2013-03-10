@@ -5,14 +5,16 @@ class Page < Content::Page
   # so if you remove this 'title' field, then you must replace it with
   # a #title method
   field :title, :string, :default => "New Page"
-  def include_in_nav?
-    true
+  def include_in_sections_nav?
+    false
+  end
+  def include_in_static_nav?
+    false
   end
   box :sections, :write_level => :root do
     allow_subclasses :Page
   end
 end
-
 class HomePage < Page
   layout :home
   field :image do
@@ -23,13 +25,19 @@ class HomePage < Page
   end
 end
 
-class AboutPage < Page
+class StaticPage < Page
+  def include_in_static_nav?
+    true
+  end
+end
+class AboutPage < StaticPage
+  layout :standard
+  
+end
+class ClientsPage < StaticPage
   layout :standard
 end
-class ClientsPage < Page
-  layout :standard
-end
-class ContactPage < Page
+class ContactPage < StaticPage
   layout :standard
 end
 
@@ -60,11 +68,9 @@ class CaseStudy < Page
     {}
   end
 end
-
 class Project < CaseStudy
   layout :project
 end
-
 class Typeface < CaseStudy
   layout :typeface
 end

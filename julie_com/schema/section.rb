@@ -1,6 +1,12 @@
 # encoding: UTF-8
 
-class ProjectsSection < Page
+class Section < Page
+  def include_in_sections_nav?
+    true
+  end
+end
+
+class ProjectsSection < Section
   layout :showcase
   
   box :case_studies do
@@ -9,7 +15,7 @@ class ProjectsSection < Page
   
 end
 
-class TypefacesSection < Page
+class TypefacesSection < Section
   layout :showcase
   
   box :case_studies do
