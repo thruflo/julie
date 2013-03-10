@@ -5,21 +5,16 @@ class Section < Page
     true
   end
 end
-
 class ProjectsSection < Section
   layout :showcase
-  
-  box :case_studies do
+  box :casestudies do
     allow :Project
   end
-  
 end
-
 class TypefacesSection < Section
   layout :showcase
-  
-  box :case_studies do
+  box :casestudies do
     allow :Typeface
   end
-  
 end
+

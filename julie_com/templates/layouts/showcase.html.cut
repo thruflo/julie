@@ -1,7 +1,11 @@
 %{ extends "layouts/standard" }
 
-%{ block :page }
-  
-  I am the showcase template.
-  
-%{ endblock :page }
+%{ block :left }
+  <ul class="list-nav">
+    %{ casestudies.each do |casestudy| }
+      <li ${ classes "active" => casestudy.active?(page) }>
+        <a href="${casestudy.path}">${casestudy.title}</a>
+      </li>
+    %{ end }
+  </ul>
+%{ endblock :left }

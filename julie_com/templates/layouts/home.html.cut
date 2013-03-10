@@ -1,9 +1,15 @@
 %{ extends "layouts/standard" }
 
 %{ block :page }
-  
-  I am the homepage content
-  
-  http://masonry.desandro.com/
-
+  <div id="masonry">
+    %{ Site['#projects'].casestudies.each do |casestudy| }
+      %{ unless casestudy.home_page_image.empty? }
+        <div class="brick">
+          <a href="${ casestudy.path }">
+            <img src="${ casestudy.home_page_image.medium.src }" />
+          </a>
+        </div>
+      %{ end 
+    end }
+  </div>
 %{ endblock :page }

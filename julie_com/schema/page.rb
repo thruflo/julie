@@ -11,66 +11,12 @@ class Page < Content::Page
   def include_in_static_nav?
     false
   end
-  box :sections, :write_level => :root do
-    allow_subclasses :Page
-  end
 end
+
 class HomePage < Page
   layout :home
-  field :image do
-    size :feature do
-      fit 640, 360
-      optimize!
-    end
+  box :sections, :write_level => :root do
+    allow_subclasses :Section
+    allow_subclasses :StaticPage
   end
-end
-
-class StaticPage < Page
-  def include_in_static_nav?
-    true
-  end
-end
-class AboutPage < StaticPage
-  layout :standard
-  
-end
-class ClientsPage < StaticPage
-  layout :standard
-end
-class ContactPage < StaticPage
-  layout :standard
-end
-
-class CaseStudy < Page
-  field :welcome
-  
-  field :feature_image, :feature_image
-  field :thumb_image, :thumb_image
-  field :home_image, :home_image
-  
-  #logotype
-  #client
-  #collaborators
-  #description
-  #hasFrontPageImage
-  
-  def image_data
-    image = self.feature_image
-    unless image.empty?
-      if self.thumb_image.empty?
-        small = image.thumb.src
-      else
-        small = self.thumb_image.thumb.src
-      end
-      return { :large => image.large.src, :small => small,
-              :home => self.home_image.raw.src}
-    end
-    {}
-  end
-end
-class Project < CaseStudy
-  layout :project
-end
-class Typeface < CaseStudy
-  layout :typeface
 end
