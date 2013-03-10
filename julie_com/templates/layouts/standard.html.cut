@@ -61,21 +61,6 @@
       <div class="container">
         <div class="row-fluid">
           %{ block :page }
-            <div class="span-left">
-              %{ block :left }
-                <!-- left hand side of main page content -->
-              %{ endblock :left }
-            </div>
-            <div class="span-mid">
-              %{ block :mid }
-                <!-- middle section of main page content -->
-              %{ endblock :mid }
-            </div>
-            <div class="span-right">
-              %{ block :right }
-                <!-- right hand side of main page content -->
-              %{ endblock :right }
-            </div>
           %{ endblock :page }
         </div>
       </div>

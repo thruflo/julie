@@ -1,11 +1,5 @@
 %{ extends "layouts/standard" }
 
-%{ block :left }
-  <ul class="list-nav">
-    %{ casestudies.each do |casestudy| }
-      <li ${ classes "active" => casestudy.active?(page) }>
-        <a href="${casestudy.path}">${casestudy.title}</a>
-      </li>
-    %{ end }
-  </ul>
-%{ endblock :left }
+%{ block :page }
+  Showcase
+%{ endblock :page }
