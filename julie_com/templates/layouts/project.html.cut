@@ -1,5 +1,34 @@
 %{ extends "layouts/standard" }
 
 %{ block :page }
-  Project
+  <div class="span-left">
+    <ul class="list-nav">
+      %{ Site['#projects'].casestudies.each do |casestudy| }
+        <li ${ classes "active" => casestudy.active?(page) }>
+          <a href="${casestudy.path}">${casestudy.title}</a>
+        </li>
+      %{ end }
+    </ul>
+  </div>
+  <div class="span-mid">
+    <div class="media-panes">
+      %{ media.each_with_index do |target, index| }
+        <div id="media-image-${ index }"
+            ${ classes "tab-pane", "active" => index == 0 }>
+          <img src="${ target.image.large.src }" />
+        </div>
+      %{ end }
+    </div>
+  </div>
+  <div class="span-right">
+    <div class="thumb-tabs">
+      %{ media.each_with_index do |target, index| }
+        <div ${ classes "thumb", "active" => index == 0 }>
+          <a data-toggle="tab" href="#media-image-0">
+            <img src="${ target.image.thumb.src }" />
+          </a>
+        </div>
+      %{ end }
+    </div>
+  </div>
 %{ endblock :page }
